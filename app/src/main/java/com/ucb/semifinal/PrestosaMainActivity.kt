@@ -46,7 +46,7 @@ class PrestosaMainActivity : AppCompatActivity() {
         courseDetailDao = database.courseDetailDao()
 
         // Initialize adapter
-        courseDetailAdapter = CourseDetailAdapter(this, lifecycleScope, courseDetailDao)
+        courseDetailAdapter = CourseDetailAdapter(this, lifecycleScope, courseDetailDao, binding)
 
         // Set adapter to RecyclerView
         binding.gradesRecyclerView.adapter = courseDetailAdapter
@@ -66,5 +66,11 @@ class PrestosaMainActivity : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        setUpRecyclerView()
+        fetchDataAndUpdateRecyclerView()
     }
 }

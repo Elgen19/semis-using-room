@@ -7,10 +7,10 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "course_details")
 data class CourseDetail(
     @PrimaryKey(autoGenerate = true)
-    val id: Long = 0L,
-    val edpCode: Int,
-    val courseName: String,
-    val time: String,
-    val grade: Double
+    var id: Long = 0L,
+    var edpCode: Int,
+    var courseName: String,
+    var time: String,
+    var grade: Double
 )
 

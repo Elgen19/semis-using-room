@@ -4,5 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPassed">#132B0A</color>
     <color name="colorFailed">#3A0E0E</color>
-
+    <color name="close_button">#FF0000</color>
 </resources>

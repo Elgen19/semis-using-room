@@ -1,5 +1,6 @@
 package com.ucb.semifinal
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,13 @@ class PrestosaAddCourseDetailActivity : AppCompatActivity() {
         // Set click listener for save button
         binding.saveButton.setOnClickListener {
             saveCourseDetail()
+        }
+
+        binding.closeButton.setOnClickListener {
+            val intent = Intent(this, PrestosaMainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            finish() // Optionally, finish this activity to go back to the previous activity in the stack
         }
     }
 

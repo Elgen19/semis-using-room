@@ -1,7 +1,9 @@
 <!-- activity_prestosa_add_course_detail.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -14,7 +16,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+            android:importantForAccessibility="no"
+            app:tint = "@color/close_button"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            tools:ignore="ImageContrastCheck" />
 
 
     </RelativeLayout>
@@ -31,15 +37,22 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="start|center_vertical"
-            android:text="EDP Code"
+            android:text="@string/edp_code"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edpCodeEditText"
             android:layout_width="0dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:background="@drawable/filled_rectangle"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="number" />
+            android:hint="@string/enter_edp_code"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
     </LinearLayout>
 
@@ -55,14 +68,22 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="start|center_vertical"
-            android:text="Course Name"
+            android:text="@string/course_name"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/courseNameEditText"
             android:layout_width="0dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:background="@drawable/filled_rectangle"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:hint="@string/enter_course_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
     </LinearLayout>
 
@@ -78,14 +99,22 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="start|center_vertical"
-            android:text="Time"
+            android:text="@string/time"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/timeEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:background="@drawable/filled_rectangle"
+            android:hint="@string/enter_time"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:minHeight="48dp"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
     </LinearLayout>
 
@@ -101,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="start|center_vertical"
-            android:text="Grade"
+            android:text="@string/grade"
             android:textSize="16sp" />
 
         <EditText
@@ -109,7 +138,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="numberDecimal" />
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:background="@drawable/filled_rectangle"
+            android:hint="@string/enter_grade"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
     </LinearLayout>
 
@@ -124,6 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:text="Save" />
+        android:text="@string/save"
+        tools:ignore="VisualLintButtonSize" />
 
 </LinearLayout>
